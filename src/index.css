@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-lumio-black: #050505;
+  --color-lumio-charcoal: #121212;
+  --color-lumio-neon: #8B5CF6; /* Violet */
+  --color-lumio-blue: #3B82F6; /* Electric Blue */
+}
+
+@layer base {
+  body {
+    @apply bg-lumio-black text-white antialiased selection:bg-lumio-neon/30;
+  }
+}
+
+@layer utilities {
+  .glow-neon {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+  }
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
